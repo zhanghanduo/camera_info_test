@@ -1,0 +1,14 @@
+<launch>
+	<node pkg="rosbag" type="play" name="rosbag" args="-d 2 /home/xianyu/bag/iarc_for_wyz_mission.bag">
+		<remap from="/mv_26804026/image_raw" to="/mv_26804026/image_"/>
+	</node>
+	<node pkg="camera_info_test" type="camera_info_test_node" name="camera_info_test_node">
+		<remap from="/camera_info" to="/mv_26804026/camera_info"/>
+	</node>	
+	<node pkg="image_proc" type="image_proc" name="image_proc" ns="/mv_26804026"/>
+	<node name="extract" pkg="image_view" type="extract_images" respawn="false" output="screen" cwd="ROS_HOME">
+		<remap from="image" to="/camera/image_raw"/>
+	</node>
+</launch>
+
+
