@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: camera_info_test
+Description: Description of camera_info_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

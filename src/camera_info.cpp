@@ -10,7 +10,13 @@ CCameraInfo::CCameraInfo(ros::NodeHandle nh):	nh_(nh), it(nh_)
     pub_right_cam_info = nh.advertise<sensor_msgs::CameraInfo>("/wide/right/camera_info", 1); //right
     ROS_INFO("Advertized on topic /wide/right/camera_info");
 
-    left_frame_id = "wide_camera";
+    frame_id = "/base_link";
+
+    if(nh.getParam("frame_id", frame_id))
+        ROS_INFO("Get child target tf frame id: %s", frame_id.c_str());
+    else
+        ROS_INFO("Use default child target tf frame id: %s", frame_id.c_str());
+    left_frame_id = frame_id;
     right_frame_id = left_frame_id;
 
 }

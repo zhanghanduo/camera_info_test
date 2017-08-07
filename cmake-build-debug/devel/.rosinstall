@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/zh/catkin_ws/src/camera_info_test/cmake-build-debug/devel/setup.sh

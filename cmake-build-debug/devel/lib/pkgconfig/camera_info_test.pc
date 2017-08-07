@@ -1,0 +1,8 @@
+prefix=/home/zh/catkin_ws/src/camera_info_test/cmake-build-debug/devel
+
+Name: camera_info_test
+Description: Description of camera_info_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/zh/catkin_ws/src/camera_info_test/cmake-build-debug/devel/lib 
+Requires: 

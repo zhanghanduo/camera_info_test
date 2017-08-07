@@ -23,6 +23,7 @@ public:
 	ros::Publisher pub_right_cam_info;
     std::string left_frame_id;
     std::string right_frame_id;
+	std::string frame_id;
 
     unsigned int seq1, seq2;
 //	sensor_msgs::CameraInfoPtr cinfo_msg;

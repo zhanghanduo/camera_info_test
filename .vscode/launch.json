@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    
+    {
+      "command": "roslaunch",
+      "debugSettings": "${command:debugSettings}",
+      "type": "ros"
+    }
+  ],
+  "version": "0.1.0"
+}
